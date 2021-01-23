@@ -19,16 +19,6 @@ h1 {
   color: black;
 }
 
-.header {
-  width: 80%;
-  background: transparent;
-  padding: 1rem;
-  position: absolute;
-  top: 10rem;
-  left: 1rem;
-  z-index: 1000;
-}
-
 .lottie-env {
   width: 100%;
   height: auto;
@@ -88,9 +78,237 @@ a {
 
 /* START */
 
+.container {
+  margin: 0 2rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: auto;
   grid-gap: 0.625rem 1.875rem;
+}
+
+.maker-bol {
+  width: 10rem;
+  height: 10rem;
+  animation: -maker-bol 8s infinite linear;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes -maker-bol {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.body-text {
+  font-size: 1.6rem;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.body-text-bold {
+  font-weight: 600;
+}
+
+@media (--ipad) {
+  .container {
+    margin: 0 8rem;
+  }
+}
+
+/* tools */
+
+.tools {
+  grid-column: col-start / span 6;
+}
+
+.tools-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tools-item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  border: 2px solid var(--color-black);
+  margin: -1px;
+  padding: 4rem 0;
+
+  & img {
+    margin-bottom: 2rem;
+  }
+}
+
+.first_of_all {
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: roc-grotesk, sans-serif;
+}
+
+@media (--ipad) {
+  .tools-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (--macbook) {
+  .tools-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* tutorial */
+
+.tut-number {
+  font-weight: 600;
+  font-size: 4rem;
+  padding: 1rem;
+  background: #eec372;
+  display: inline-block;
+  border: 2px solid black;
+}
+
+.tut1 {
+}
+
+.tut3 {
+  grid-column: col-start / span 6;
+}
+
+.tut3_step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tut3_step-img_container {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.tut3_steps {
+}
+
+.tut3_step-img {
+  width: 80%;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.tut3_step-number {
+  position: absolute;
+
+  font-family: roc-grotesk, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12.5rem;
+  top: -3rem;
+  left: calc(50% - 3.75rem);
+
+  color: #eec372;
+
+  -webkit-text-stroke: 2px black;
+  z-index: -1;
+}
+
+.tut3_step-number_2 {
+  left: -20%;
+}
+
+.tut3_step-number_3 {
+  left: unset;
+  right: -20%;
+}
+
+.dotted-line {
+  display: block;
+  margin: 2rem 0;
+  height: 8rem;
+  width: 0.2rem;
+  background: repeating-linear-gradient(
+      to bottom,
+      black 0,
+      black 8px,
+      transparent 8px,
+      transparent 16px
+    )
+    /*3px red then 4px transparent -> repeat this!*/;
+}
+
+/* TUTORIAL - 5 */
+.tut5 {
+  background: var(--color-yellow);
+}
+
+.tut5-wobble_top {
+  background: url(./assets/img/step5_wobble.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom 0 left 50%;
+  width: 100vw;
+  height: 10rem;
+}
+
+.tut5-wobble_bottom {
+  background: url(./assets/img/step5_wobble.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom 0 left 50%;
+  width: 100vw;
+  transform: rotate(180deg);
+  height: 10rem;
+}
+
+.full-width {
+  grid-column: col-start / span 6;
+}
+
+.h2,
+.h3 {
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (--ipad) {
+  .grid {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1.25rem 3.125rem;
+  }
+
+  .h2,
+  .h3 {
+  }
 }

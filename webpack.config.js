@@ -19,11 +19,20 @@ module.exports = (env, { mode }) => {
     module: {
       rules: [
         {
-          test: /\.(jpe?g|png|svg|webp|json)$/,
+          test: /\.js$/,
+          exclude: /node_modules/,
           use: {
-            loader: "file-loader",
+            loader: "babel-loader",
+          },
+        },
+        {
+          test: /\.(jpe?g|png|svg|webp|woff|woff2)$/,
+          use: {
+            loader: "url-loader",
             options: {
-              esModule: false,
+              limit: 1000,
+              context: "./src",
+              name: "[path][name].[ext]",
             },
           },
         },

@@ -1,7 +1,7 @@
 :root {
   --color-black: #2b2b2b;
   --color-bg: #efe6d7;
-  --color-dark: #1a1813;
+  --color-yellow: #f4d76d;
   --color-humoRed: #ee060d;
   --color-humoGrey: #f8f9f3;
   --color-humoBeige: #fdf6e6;
@@ -32,7 +32,6 @@
 
 @custom-media --iphone-mini screen and (min-width: 320px) and (max-width: 450px);
 @custom-media --iphone screen and (width <= 576px);
-@custom-media --iphone-max screen and (width <= 768px);
-@custom-media --ipad screen and (width <= 992px);
-@custom-media --macbook screen and (width <= 1280px);
+@custom-media --ipad screen and (width >= 768px);
+@custom-media --macbook screen and (width >= 1024px);
 @custom-media --imac screen and (width <= 1440px);
