@@ -188,10 +188,14 @@ a {
 .tut-number {
   font-weight: 600;
   font-size: 4rem;
-  padding: 1rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #eec372;
-  display: inline-block;
   border: 2px solid black;
+  box-shadow: 10px 10px 0px 0px rgba(43, 43, 43, 1);
 }
 
 .tut1 {
