@@ -30,7 +30,12 @@ if (!empty($insertTodoResult)) {
 }
 ?>
 
-<header>
+<header class="container">
+  <h1 class="h1">Heely Crocs: Tutorial</h1>
+  <p class="subheading">The Shoes of the Future</p>
+  <p class="text-left">
+    Crocs op wieltjes. Iedereen zijn droom toch? Met deze tutorial leren we je hoe je heleren naar een volgend niveau brengt.
+  </p>
   <img class="maker-bol" src="./assets/img/maker-bol.svg" alt="">
 </header>
 
@@ -82,6 +87,12 @@ if (!empty($insertTodoResult)) {
         <p class="body-text text-center">
         Begin met je crocs proper te maken. Eens dat het Heeler Crocs zijn wil je natuurlijk dat ze blinken voor de buitenwereld!
         </p>
+        <div class="container">
+  <div class="tooltip">
+    <span class="tooltiptext" id="tooltiptext">50cm</span>
+  <input type="range" min="0" max="100" value="50" class="slider" id="myRange" onchange="rangeValFunc(this.value);">
+  </div>
+</div>
     </div>
   </article>
   <!-- 1 - end -->
@@ -129,9 +140,10 @@ if (!empty($insertTodoResult)) {
             Haal al het verf maar uit je kast, want je Crocs verdienen <span class="body-text-bold">een nieuw kleurtje</span>. Selecteer een kleur voor elk onderdeel van de crocs om zo al een beeld te krijgen.
           </p>
       </div>
-      <section class="lottie-env env-three full-width">
+      <img class="tut5-" src="./assets/img/smiley.png" alt="">
+      <!-- <section class="lottie-env env-three full-width">
         <div id="lottie-three"><div>
-      </section>
+      </section> -->
     </article>
     <div class="tut5-wobble_bottom full-width"></div>
   <!-- step 5 - end -->

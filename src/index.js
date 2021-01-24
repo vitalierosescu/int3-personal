@@ -1,4 +1,5 @@
 require("./style.css");
+// require("./js/Snappable/index.js");
 
 {
   const init = () => {
