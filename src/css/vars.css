@@ -1,7 +1,8 @@
 :root {
-  --color-black: #2b2b2b;
-  --color-bg: #efe6d7;
-  --color-yellow: #f4d76d;
+  --c-black: #2b2b2b;
+  --c-bg: #efe6d7;
+  --c-purple: #5443db;
+  --c-yellow: #f4d76d;
   --color-humoRed: #ee060d;
   --color-humoGrey: #f8f9f3;
   --color-humoBeige: #fdf6e6;
@@ -13,7 +14,7 @@
   --pink: #ffb3ba;
   --beige: #f8f3f2;
   --blauw: #4eb3ba;
-  --padding-small: 2.5rem;
+  --padding-s: 2.4rem;
   --padding-medium: 5rem;
   --padding-big: 7.5rem;
   --max-width: calc(144.4rem - var(--padding-medium));

@@ -1,17 +1,19 @@
 require("./style.css");
-// require("./js/Snappable/index.js");
+import colorPicker from "./js/color-picker/colorPicker";
 
 {
   const init = () => {
-    const $todosList = document.querySelector(`#todosList`);
-    if ($todosList) {
-      loadTodos();
-    }
+    // const $todosList = document.querySelector(`#todosList`);
+    // if ($todosList) {
+    //   loadTodos();
+    // }
 
-    const $insertTodoForm = document.querySelector(`#insertTodoForm`);
-    if ($insertTodoForm) {
-      $insertTodoForm.addEventListener(`submit`, handleSubmitInsertTodoForm);
-    }
+    // const $insertTodoForm = document.querySelector(`#insertTodoForm`);
+    // if ($insertTodoForm) {
+    //   $insertTodoForm.addEventListener(`submit`, handleSubmitInsertTodoForm);
+    // }
+
+    colorPicker();
 
     // lottie - start
 
