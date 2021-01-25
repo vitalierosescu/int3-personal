@@ -84,35 +84,48 @@ if (!empty($insertTodoResult)) {
 <!--  ›››››› tutorial section ›››››› -->
 <section class="tuts">
   <!-- step 1 - start -->
-  <article class="tut1 grid">
-    <div class="container full-width">
+  <div class="tut-number tut-number3 shadow">01</div>
+  <article class="tut1 tut1-container grid">
+    <div class="full-width">
       <h3 class="h3 text-center">Croc Wash</h3>
-      <p class="body-text text-center">
+      <p class="tut1-text text-center">
         Begin met je crocs proper te maken. Eens dat het Heeler Crocs zijn wil je natuurlijk dat ze blinken voor de buitenwereld!
       </p>
-      <div class="container">
-        <div class="tooltip">
-          <span class="tooltiptext" id="tooltiptext">50cm</span>
-          <input type="range" min="0" max="100" value="50" class="slider" id="myRange" onchange="rangeValFunc(this.value);">
-        </div>
+
+      <div class="slider-container">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
       </div>
+      <img class="wash-croc" src="./assets/img/wash-croc.svg" alt="">
     </div>
   </article>
   <!-- 1 - end -->
+
+  <article class="tut2">
+    <div class="grid container">
+      <div class="tut2-heading">
+        <h1>Tijd voor een autopsie.</h1>
+        <p>We snijden een vierkant uit de crocs. Het doet pijn natuurlijk om in je crocs te moeten snijden, maar het eindresultaat zal het allemaal waard maken!</p>
+      </div>
+      <div class="croc-shoc-container">
+        <img class="croc-shoc-man" src="./assets/img/croc-shoc-man.svg" alt="">
+        <img class="hand" src="./assets/img/hand.svg" data-aos="fade-right" data-aos-duration="2000" alt="">
+      </div>
+    </div>
+  </article>
 
   <div class="tut-number tut-number3 shadow"> 03</div>
 
   <!-- 3 - start -->
   <article class="tut3 container">
     <h3 class="h3">Put the wheels in the heels</h3>
-    <p class="body-text">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
+    <p class="">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
     <ul class="tut3_steps">
       <li class="tut3_step">
         <div class="tut3_step-img_container">
           <img class="tut3_step-img skateboard" src="./assets/img/skateboard.png" width="200px" height="" alt="">
           <p class="tut3_step-number">1</p>
         </div>
-        <p class="body-text text-center">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
+        <p class="tut3_step-text text-center">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
         <div class="dotted-line"></div>
       </li>
       <li class="tut3_step">
@@ -120,7 +133,7 @@ if (!empty($insertTodoResult)) {
           <img class="tut3_step-img" src="./assets/img/thread.png" width="200px" height="" alt="">
           <p class="tut3_step-number tut3_step-number_2">2</p>
         </div>
-        <p class="body-text text-center">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
+        <p class="tut3_step-text text-center">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
         <div class="dotted-line"></div>
       </li>
       <li class="tut3_step">
@@ -128,7 +141,7 @@ if (!empty($insertTodoResult)) {
           <img class="tut3_step-img" src="./assets/img/plastic.png" width="200px" height="" alt="">
           <p class="tut3_step-number tut3_step-number_3">3</p>
         </div>
-        <p class="body-text text-center">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
+        <p class="tut3_step-text text-center">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
       </li>
     </ul>
   </article>
@@ -434,7 +447,7 @@ if (!empty($insertTodoResult)) {
   </div>
 </section>
 
-<section class="lottie-env env-two">
+<!-- <section class="lottie-env env-two">
   <div class="display-buttons">
     <div id="lottie-two"></div>
     <div id="lottie-four"></div>
@@ -443,7 +456,7 @@ if (!empty($insertTodoResult)) {
     <div id="lottie-seven"></div>
 
   </div>
-</section>
+</section> -->
 
 <section class="lottie-env">
 </section>
@@ -457,6 +470,7 @@ if (!empty($insertTodoResult)) {
 <!-- lottie - end -->
 
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="text/javascript">
   {

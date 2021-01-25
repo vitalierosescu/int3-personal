@@ -1,5 +1,6 @@
 require("./style.css");
 import colorPicker from "./js/color-picker/colorPicker";
+AOS.init();
 
 {
   const init = () => {
