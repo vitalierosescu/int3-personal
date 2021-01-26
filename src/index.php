@@ -7,21 +7,25 @@ error_reporting(E_ALL);
 if (file_exists("../.env")) {
   $variables = parse_ini_file("../.env", true);
   foreach ($variables as $key => $value) {
-     putenv("$key=$value");
+    putenv("$key=$value");
   }
 }
 
 $routes = array(
   'home' => array(
-    'controller' => 'Todos',
+    'controller' => 'Pages',
     'action' => 'index'
+  ),
+  'checkout' => array(
+    'controller' => 'Orders',
+    'action' => 'checkout'
   )
 );
 
-if(empty($_GET['page'])) {
+if (empty($_GET['page'])) {
   $_GET['page'] = 'home';
 }
-if(empty($routes[$_GET['page']])) {
+if (empty($routes[$_GET['page']])) {
   header('Location: index.php');
   exit();
 }

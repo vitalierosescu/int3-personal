@@ -4,9 +4,41 @@
 /* @import "./css/footer.css"; */
 /* @import "./assets/fonts/fonts.css"; */
 
+.hidden {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.white {
+  color: black;
+}
+
+.header {
+  width: 80%;
+  background: transparent;
+  padding: 1rem;
+  position: absolute;
+  top: 10rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
 .lottie-env {
   width: 100%;
   height: auto;
+}
+
+#lottie {
+  z-index: -10;
 }
 
 .lottie-env .button-container {
@@ -69,6 +101,7 @@ body {
 
 body,
 button,
+span,
 h1,
 h2,
 h3 {
@@ -163,6 +196,10 @@ h3 {
   box-shadow: 1rem 1rem 0 0 rgba(43, 43, 43, 1);
   transition: all 0.3s ease;
   cursor: pointer;
+
+  & a {
+    color: white;
+  }
 }
 
 .btn:hover {
@@ -203,6 +240,12 @@ h3 {
   body,
   p {
     font-size: 1.6rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 4.8rem;
   }
 }
 
@@ -267,6 +310,24 @@ h3 {
   }
 }
 
+/* diy package */
+
+.package {
+  background: #84c4b0;
+  padding: 8rem;
+  border-radius: 5rem;
+  align-items: center;
+}
+
+.package-img {
+  grid-column: 1 / span 6;
+  margin: 0 auto;
+}
+
+.package-heading {
+  grid-column: 7 / span 6;
+}
+
 /* tutorial */
 
 /* tut 1 */
@@ -274,13 +335,53 @@ h3 {
 .tut1 {
 }
 
+.tut-number1 {
+  margin: 5rem auto;
+}
+
 .tut1-container {
   max-width: 1240px;
   padding: 0 8rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tut1-text {
+}
+
+.tut1-instruction {
+  opacity: 0.6;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tut1-hand {
+  animation: -tut1-hand 2s ease-out infinite;
+}
+
+.tut1-succes {
+  margin: 3rem 0;
+  font-weight: bold;
+}
+
+.tut1-cleaning {
+  margin: 3rem 0;
+  font-weight: bold;
+}
+
+@keyframes -tut1-hand {
+  0% {
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    transform: translateX(10rem);
+    /* opacity: 0; */
+  }
 }
 
 .wash-croc {
@@ -292,6 +393,15 @@ h3 {
   .tut1-text {
     max-width: 35rem;
     margin: 0 auto;
+  }
+
+  .tut-number1 {
+    margin: 5rem auto;
+    position: absolute;
+  }
+
+  .tut1-heading {
+    position: relative;
   }
 }
 
@@ -331,13 +441,19 @@ h3 {
   margin-bottom: 15rem;
 }
 
+.tut3-text {
+  max-width: 40rem;
+}
+
 .tut3_steps {
+  margin: 5rem 0;
 }
 
 .tut3_step {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .tut3_step-text {
@@ -613,6 +729,91 @@ h3 {
   }
 }
 
+@media (--macbook) {
+  .cp-title-numbers {
+    background: none;
+    padding: 0;
+  }
+}
+
+/* inspiratie */
+#rssBlock {
+  left: 0px;
+  height: 80px;
+  background: bleu;
+  /* position: absolute; */
+  width: 100vw;
+  overflow: hidden;
+}
+
+/*remove p*/
+.cnnContents {
+  width: 100%;
+  padding-top: 20px;
+  margin: 0 auto;
+  font-size: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Museo";
+  font-weight: 300;
+}
+
+.loop1 {
+  display: inline-block;
+  transform: translateX(-50vw);
+  animation: scrolling-left1 25s linear infinite;
+}
+
+.loop2 {
+  display: inline-block;
+  animation: scrolling-left2 25s linear infinite;
+  transform: translateX(-50vw);
+  animation-delay: 12.5s;
+}
+
+.inspiration-outline {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-right: 1.6rem;
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 3%;
+}
+
+.inspiration-full {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-right: 1.6rem;
+  letter-spacing: 3%;
+}
+
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-left2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@media (--ipad) {
+  .inspiration-full {
+    font-size: 4.8rem;
+  }
+  .inspiration-outline {
+    font-size: 4.8rem;
+  }
+}
+
 /* tut - 5 */
 
 .tut5 {
@@ -657,6 +858,7 @@ h3 {
   outline: none;
   opacity: 0.7;
   transition: opacity 0.2s;
+  z-index: 10;
 }
 
 .slider:hover {
@@ -680,4 +882,32 @@ h3 {
   .full-width {
     grid-column: col-start / span 12;
   }
+}
+
+@media (--macbook) {
+  .tut5-wobble_top {
+    height: 15rem;
+  }
+
+  .tut5-wobble_bottom {
+    height: 15rem;
+  }
+}
+
+/* tut - end */
+
+.tut-end {
+  background: var(--c-yellow);
+  padding: 8rem;
+  border-radius: 5rem;
+  align-items: center;
+}
+
+.tut-end-img {
+  grid-column: 7 / span 6;
+  margin: 0 auto;
+}
+
+.tut-end-heading {
+  grid-column: 1 / span 6;
 }

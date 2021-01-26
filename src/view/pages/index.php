@@ -1,35 +1,3 @@
-<ol id="todosList">
-  <!-- met JS ingeladen -->
-</ol>
-<?php
-if (!empty($insertTodoResult)) {
-?>
-  <p>De todo werd toegevoegd!</p>
-<?php
-} else {
-  if (!empty($errors)) {
-    echo '<div class="error">Gelieve de verplichte velden in te vullen</div>';
-  }
-?>
-  <form id="insertTodoForm" method="post" action="index.php">
-    <input type="hidden" name="action" value="insertTodo" />
-    <div>
-      <label for="inputText">text:</label>
-      <input type="text" id="inputText" name="text" value="<?php
-                                                            if (!empty($_POST['text'])) {
-                                                              echo $_POST['text'];
-                                                            }
-                                                            ?>" />
-      <span class="error error--text"><?php if (!empty($errors['text'])) echo $errors['text']; ?></span>
-    </div>
-    <div>
-      <button type="submit">Add Todo</button>
-    </div>
-  </form>
-<?php
-}
-?>
-
 <header class="container">
   <h1 class="h1">Heely Crocs: Tutorial</h1>
   <p class="subheading">The Shoes of the Future</p>
@@ -81,22 +49,46 @@ if (!empty($insertTodoResult)) {
   </ul>
 </section>
 
+<section class="package container grid">
+  <img class="package-img" src="./assets/img/insta.png" alt="">
+  <div class="package-heading">
+    <h2>Materialen tekort?</h2>
+    <p>
+      WE ZIJN KLAAR. Ben je trots op je nieuwe crocs? Je kan met je vrienden delen wat je allemaal doet in de corona tijd. Wie weet zit je straks samen te heleren!
+    </p>
+    <div class="btn cp-btn-01"><a href="index.php?page=checkout">Volgende</a></div>
+  </div>
+</section>
+
 <!--  ›››››› tutorial section ›››››› -->
 <section class="tuts">
   <!-- step 1 - start -->
-  <div class="tut-number tut-number3 shadow">01</div>
-  <article class="tut1 tut1-container grid">
-    <div class="full-width">
-      <h3 class="h3 text-center">Croc Wash</h3>
-      <p class="tut1-text text-center">
-        Begin met je crocs proper te maken. Eens dat het Heeler Crocs zijn wil je natuurlijk dat ze blinken voor de buitenwereld!
-      </p>
-
-      <div class="slider-container">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <article class="tut1 grid">
+    <div class="full-width tut1-container">
+      <div class="tut1-heading">
+        <div class="tut-number tut-number1 shadow">01</div>
+        <div>
+          <h3 class="h3 text-center">Croc Wash</h3>
+          <p class="tut1-text text-center">
+            Begin met je crocs proper te maken. Eens dat het Heeler Crocs zijn wil je natuurlijk dat ze blinken voor de buitenwereld!
+          </p>
+          <div class="tut1-instruction">
+            <p class="tut1-instruction-text">Hou de kraan 3 seconden boven de crocs.</p>
+            <img class="tut1-hand" src="./assets/img/lil-hand.svg" alt="">
+          </div>
+          <p class="tut1-succes text-center hidden">Looking clean!</p>
+        </div>
+        </di>
+        <div class="slider-container">
+          <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+        </div>
+        <!-- <img class="wash-croc" src="./assets/img/wash-croc.svg" alt=""> -->
+        <section class="lottie-env">
+          <div id="lottie"></div>
+          <div class="button-container">
+          </div>
+        </section>
       </div>
-      <img class="wash-croc" src="./assets/img/wash-croc.svg" alt="">
-    </div>
   </article>
   <!-- 1 - end -->
 
@@ -118,7 +110,7 @@ if (!empty($insertTodoResult)) {
   <!-- 3 - start -->
   <article class="tut3 container">
     <h3 class="h3">Put the wheels in the heels</h3>
-    <p class="">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
+    <p class="tut3-text">Voor de wieltjes zijn er 2 opties. Je neemt wieljtes uit je oud skateboard of je laat het model 3D printen.</p>
     <ul class="tut3_steps">
       <li class="tut3_step">
         <div class="tut3_step-img_container">
@@ -399,6 +391,16 @@ if (!empty($insertTodoResult)) {
     </div>
   </div>
 
+  <!-- inspiratie -->
+  <div id='rssBlock'>
+    <p class="cnnContents">
+
+      <span class="loop1">&nbsp;<span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span><span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span><span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span><span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span></span>
+
+      <span class="loop2">&nbsp;<span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span><span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span><span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span><span class="inspiration-outline">inspiratie</span><span class=inspiration-full>inspiratie</span></span>
+    </p>
+  </div>
+
   <!-- step 5 - start -->
   <div class="tut5-wobble_top full-width"></div>
   <article class="tut5 grid">
@@ -409,63 +411,29 @@ if (!empty($insertTodoResult)) {
       </p>
     </div>
     <!-- <img class="tut5-" src="./assets/img/smiley.png" alt=""> -->
-    <!-- <section class="lottie-env env-three full-width">
-        <div id="lottie-three"><div>
-      </section> -->
+    <section class="lottie-env env-three full-width">
+      <div id="lottie-three">
+        <div>
+    </section>
   </article>
   <div class="tut5-wobble_bottom full-width"></div>
   <!-- step 5 - end -->
 
+  <article class="tut-end container grid">
+    <div class="tut-end-heading">
+      <h3>Wohooooo!</h3>
+      <p>
+        WE ZIJN KLAAR. Ben je trots op je nieuwe crocs? Je kan met je vrienden delen wat je allemaal doet in de corona tijd. Wie weet zit je straks samen te heleren!
+      </p>
+      <div class="btn cp-btn-01">Deel je trotse creatie</div>
+    </div>
+    <img class="tut-end-img" src="./assets/img/insta.png" alt="">
+  </article>
 </section>
 
 
 <!-- lottie test -->
 
-<div class="header">
-  <h1 class="white">Animating with Lottie, ScrollMagic, and GSAP.</h1>
-  <h3 class="white">A quick testing playground.</h3>
-  <p class="white">This playground contains several methods to manipulate lottie animations.</p>
-  <a target="_blank" href="https://www.lottiefiles.com/29-motorcycle">Bike Animation</a>
-  <a target="_blank" href="https://www.lottiefiles.com/432-done-button">Check Animation</a>
-  <a target="_blank" href="https://www.lottiefiles.com/82-rey-updated">Rey Animation</a>
-</div>
-
-
-<!-- <section class="lottie-env env-three">
-  <div id="lottie-three"><div>
-</section> -->
-
-
-
-<section class="lottie-env">
-  <div id="lottie"></div>
-  <div class="button-container">
-    <button id="dark-btn" class="dark-mode">Toggle Dark Mode</button>
-    <button id="light-btn" class="dark-mode">Toggle Light Mode</button>
-    <button id="pause-btn">Pause</button>
-    <button id="play-btn">Play</button>
-  </div>
-</section>
-
-<!-- <section class="lottie-env env-two">
-  <div class="display-buttons">
-    <div id="lottie-two"></div>
-    <div id="lottie-four"></div>
-    <div id="lottie-five"></div>
-    <div id="lottie-six"></div>
-    <div id="lottie-seven"></div>
-
-  </div>
-</section> -->
-
-<section class="lottie-env">
-</section>
-
-
-<section class="lottie-env env-last">
-  <div id="lottie-coin">
-    <div>
-</section>
 
 <!-- lottie - end -->
 
