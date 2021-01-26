@@ -22,16 +22,6 @@ h1 {
   color: black;
 }
 
-.header {
-  width: 80%;
-  background: transparent;
-  padding: 1rem;
-  position: absolute;
-  top: 10rem;
-  left: 1rem;
-  z-index: 1000;
-}
-
 .lottie-env {
   width: 100%;
   height: auto;
@@ -95,6 +85,14 @@ a {
 
 /* START */
 
+/* nav - start */
+
+.nav {
+  height: 20rem;
+}
+
+/* nav - end */
+
 body {
   background: var(--c-bg);
 }
@@ -127,7 +125,11 @@ h3 {
   font-weight: bold;
   font-size: 2.2rem;
   color: #5443db;
-  margin-bottom: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.header-text {
+  margin-bottom: 3rem;
 }
 
 .container {
@@ -137,10 +139,42 @@ h3 {
 .table {
   background: url(./assets/img/table-s_1.svg);
   width: 100%;
-  height: 24rem;
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+
+  grid-column: 1 / span 6;
+}
+
+.header {
+}
+
+.header-heading {
+  grid-column: 1 / span 6;
+}
+
+.header-paint {
+  position: absolute;
+  bottom: 10%;
+  right: 30%;
+}
+
+.header-3d {
+  position: absolute;
+}
+
+.header-ruler {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+}
+
+.header-holy {
+  width: 45vw;
+  max-width: 30rem;
+  margin: 0 auto;
 }
 
 .grid {
@@ -247,13 +281,39 @@ h3 {
   h3 {
     font-size: 4.8rem;
   }
+
+  .table {
+    background: url(./assets/img/table.svg);
+    width: 100%;
+    height: 20rem;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    grid-column: 1 / span 12;
+  }
+
+  .header-holy {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .header-heading {
+    margin-bottom: 10rem;
+  }
 }
 
 @media (--macbook) {
   .container {
+    /* max-width: 1240px; */
+    margin: 0 8rem;
+  }
+}
+@media (--imac) {
+  .container {
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 8rem;
   }
 }
 
@@ -261,6 +321,7 @@ h3 {
 
 .tools {
   grid-column: col-start / span 6;
+  margin-bottom: 8rem;
 }
 
 .tools-title {
@@ -314,8 +375,7 @@ h3 {
 
 .package {
   background: #84c4b0;
-  padding: 8rem;
-  border-radius: 5rem;
+  padding: 5rem 0;
   align-items: center;
 }
 
@@ -325,7 +385,45 @@ h3 {
 }
 
 .package-heading {
-  grid-column: 7 / span 6;
+  grid-column: 1 / span 6;
+  grid-row: 1;
+}
+
+@media (--ipad) {
+  .package {
+    background: none;
+  }
+  .package-container {
+    background: #84c4b0;
+    padding: 8rem;
+    border-radius: 5rem;
+    align-items: center;
+  }
+
+  .package-img {
+    grid-column: 1 / span 4;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .package-heading {
+    grid-column: 6 / 12;
+  }
+}
+
+@media (--macbook) {
+  .package-container {
+  }
+
+  .package-img {
+    grid-column: 1 / span 6;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+
+  .package-heading {
+    grid-column: 7 / span 6;
+  }
 }
 
 /* tutorial */
@@ -340,12 +438,6 @@ h3 {
 }
 
 .tut1-container {
-  max-width: 1240px;
-  padding: 0 8rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .tut1-text {
@@ -898,16 +990,43 @@ h3 {
 
 .tut-end {
   background: var(--c-yellow);
-  padding: 8rem;
-  border-radius: 5rem;
-  align-items: center;
+  padding: 5rem 0;
 }
 
 .tut-end-img {
-  grid-column: 7 / span 6;
+  grid-column: 1 / span 6;
   margin: 0 auto;
 }
 
 .tut-end-heading {
   grid-column: 1 / span 6;
+
+  & p {
+    max-width: 40rem;
+  }
+}
+
+@media (--ipad) {
+  .tut-end {
+    padding: 0;
+    background: none;
+  }
+
+  .tut-end-container {
+    background: var(--c-yellow);
+    padding: 8rem;
+    border-radius: 5rem;
+    align-items: center;
+  }
+
+  .tut-end-img {
+    grid-column: 8 / 12;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  .tut-end-heading {
+    grid-column: 1 / span 7;
+  }
 }

@@ -1,17 +1,25 @@
-<header class="container">
-  <h1 class="h1">Heely Crocs: Tutorial</h1>
-  <p class="subheading">The Shoes of the Future</p>
-  <p class="text-left">
-    Crocs op wieltjes. Iedereen zijn droom toch? Met deze tutorial leren we je hoe je heleren naar een volgend niveau brengt.
-  </p>
+<nav class="nav">
+
+</nav>
+<header class="header container grid">
+  <div class="header-heading">
+    <h1 class="h1">Heely Crocs: Tutorial</h1>
+    <p class="subheading">The Shoes of the Future</p>
+    <p class="header-text text-left">
+      Crocs op wieltjes. Iedereen zijn droom toch? Met deze tutorial leren we je hoe je heleren naar een volgend niveau brengt.
+    </p>
+    <div class="btn">Start creating</div>
+  </div>
   <!-- <img class="maker-bol" src="./assets/img/maker-bol.svg" alt=""> -->
   <div class="table">
-
+    <img class="header-paint" src="./assets/img/paint.svg" alt="">
+    <img class="header-3d hidden" src="./assets/img/3d-printer.svg" alt="">
+    <img class="header-ruler" src="./assets/img/ruler.svg" alt="">
+    <img class="header-holy" src="./assets/img/holy-croc.svg" alt="">
   </div>
 </header>
 
 <section class="tools container">
-  <!-- <p class="first_of_all text-center">First of all.</p> -->
   <h2 class="h2 text-center tools-title">Materialen & Gereedschap</h2>
   <ul class="tools-list">
     <li class="tools-item">
@@ -49,21 +57,23 @@
   </ul>
 </section>
 
-<section class="package container grid">
-  <img class="package-img" src="./assets/img/insta.png" alt="">
-  <div class="package-heading">
-    <h2>Materialen tekort?</h2>
-    <p>
-      WE ZIJN KLAAR. Ben je trots op je nieuwe crocs? Je kan met je vrienden delen wat je allemaal doet in de corona tijd. Wie weet zit je straks samen te heleren!
-    </p>
-    <div class="btn cp-btn-01"><a href="index.php?page=checkout">Volgende</a></div>
+<section class="package">
+  <div class="package-container grid container">
+    <img class="package-img" src="./assets/img/insta.png" alt="">
+    <div class="package-heading">
+      <h2>Materialen tekort?</h2>
+      <p>
+        WE ZIJN KLAAR. Ben je trots op je nieuwe crocs? Je kan met je vrienden delen wat je allemaal doet in de corona tijd. Wie weet zit je straks samen te heleren!
+      </p>
+      <div class="btn cp-btn-01"><a href="index.php?page=checkout">Koop een DIY pakket</a></div>
+    </div>
   </div>
 </section>
 
 <!--  ›››››› tutorial section ›››››› -->
 <section class="tuts">
   <!-- step 1 - start -->
-  <article class="tut1 grid">
+  <article class="tut1 container grid">
     <div class="full-width tut1-container">
       <div class="tut1-heading">
         <div class="tut-number tut-number1 shadow">01</div>
@@ -419,15 +429,17 @@
   <div class="tut5-wobble_bottom full-width"></div>
   <!-- step 5 - end -->
 
-  <article class="tut-end container grid">
-    <div class="tut-end-heading">
-      <h3>Wohooooo!</h3>
-      <p>
-        WE ZIJN KLAAR. Ben je trots op je nieuwe crocs? Je kan met je vrienden delen wat je allemaal doet in de corona tijd. Wie weet zit je straks samen te heleren!
-      </p>
-      <div class="btn cp-btn-01">Deel je trotse creatie</div>
+  <article class="tut-end">
+    <div class="tut-end-container container grid">
+      <div class="tut-end-heading">
+        <h3>Wohooooo!</h3>
+        <p>
+          WE ZIJN KLAAR. Ben je trots op je nieuwe crocs? Je kan met je vrienden delen wat je allemaal doet in de corona tijd. Wie weet zit je straks samen te heleren!
+        </p>
+        <div class="btn">Deel je trotse creatie</div>
+      </div>
+      <img class="tut-end-img" src="./assets/img/insta.png" alt="">
     </div>
-    <img class="tut-end-img" src="./assets/img/insta.png" alt="">
   </article>
 </section>
 

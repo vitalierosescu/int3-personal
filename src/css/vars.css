@@ -35,4 +35,4 @@
 @custom-media --iphone screen and (width <= 576px);
 @custom-media --ipad screen and (width >= 768px);
 @custom-media --macbook screen and (width >= 1024px);
-@custom-media --imac screen and (width <= 1440px);
+@custom-media --imac screen and (width >= 1440px);
