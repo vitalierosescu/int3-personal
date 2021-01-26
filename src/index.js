@@ -131,7 +131,7 @@ const lottieSlider = document.querySelector(".slider");
         setTimeout(function () {
           instructionText.textContent = "Sleep de wash volledig naar rechts.";
           wash.pause();
-        }, 2000);
+        }, 1900);
       }
 
       if (lottieSliderValue == 100 || lottieSliderValue >= 97) {

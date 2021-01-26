@@ -18,7 +18,7 @@
         <a class="nav-link" href="">tutorial</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href=""><img class="logo" src="./assets/img/logo.png" alt=""></a>
+        <a class="nav-link" href=""><img class="logo" src="./assets/img/logo.jpg" alt=""></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="">tutorial</a>

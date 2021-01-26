@@ -106,16 +106,9 @@
 
 <article class="tut2">
   <div class="tut2-container container">
-    <!-- <div class="tut2-heading">
-      <h1>Tijd voor een autopsie.</h1>
-      <p>We snijden een vierkant uit de crocs. Het doet pijn natuurlijk om in je crocs te moeten snijden, maar het eindresultaat zal het allemaal waard maken!</p>
-    </div>
-    <div class="croc-shoc-container">
-      <img class="croc-shoc-man" src="./assets/img/croc-shoc-man.svg" alt="">
-      <img class="hand" src="./assets/img/hand.svg" data-aos="fade-right" data-aos-duration="2000" alt="">
-    </div> -->
     <div class="autopsie-lottie-section">
       <div class="tut2-heading">
+        <div class="tut-number tut-number2 shadow">02</div>
         <h1>Tijd voor een autopsie.</h1>
         <p class="tut2-heading-text">We snijden een vierkant uit de crocs. Het doet pijn natuurlijk om in je crocs te moeten snijden, maar het eindresultaat zal het allemaal waard maken!</p>
       </div>
