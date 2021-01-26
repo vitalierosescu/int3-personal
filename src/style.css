@@ -1006,6 +1006,9 @@ h3 {
   }
 }
 
+.test {
+}
+
 @media (--ipad) {
   .tut-end {
     padding: 0;
