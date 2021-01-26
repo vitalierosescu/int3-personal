@@ -13,7 +13,7 @@
   <!-- <img class="maker-bol" src="./assets/img/maker-bol.svg" alt=""> -->
   <div class="table">
     <img class="header-paint" src="./assets/img/paint.svg" alt="">
-    <img class="header-3d" src="./assets/img/3d-printer.svg" alt="">
+    <img class="header-3d hidden" src="./assets/img/3d-printer.svg" alt="">
     <img class="header-ruler" src="./assets/img/ruler.svg" alt="">
     <img class="header-holy" src="./assets/img/holy-croc.svg" alt="">
   </div>
@@ -63,9 +63,9 @@
     <div class="package-heading">
       <h2>Materialen tekort?</h2>
       <p>
-        Geen zorgen. We zorgen een DIY pakket voor jou waar je meteen mee aan de slag kunt voor het maken van 1 paar Heely Crocs.
+        WE ZIJN KLAAR. Ben je trots op je nieuwe crocs? Je kan met je vrienden delen wat je allemaal doet in de corona tijd. Wie weet zit je straks samen te heleren!
       </p>
-      <div class="btn"><a href="index.php?page=checkout">Koop een DIY pakket</a></div>
+      <div class="btn cp-btn-01"><a href="index.php?page=checkout">Koop een DIY pakket</a></div>
     </div>
   </div>
 </section>
@@ -110,7 +110,7 @@
       </div>
       <div class="croc-shoc-container">
         <img class="croc-shoc-man" src="./assets/img/croc-shoc-man.svg" alt="">
-        <img class="hand" src="./assets/img/hand.svg" data-aos="fade-right" data-aos-duration="2000" alt="klein handje die aanwijst waar je moet draggen/swipen">
+        <img class="hand" src="./assets/img/hand.svg" data-aos="fade-right" data-aos-duration="2000" alt="">
       </div>
     </div>
   </article>

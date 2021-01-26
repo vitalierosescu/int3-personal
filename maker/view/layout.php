@@ -12,25 +12,17 @@
 </head>
 
 <body>
-  <nav class="nav container">
-    <ul class="nav-list grid">
-      <li class="nav-item">
-        <a class="nav-link" href="">tutorial</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href=""><img class="logo" src="./assets/img/logo.png" alt=""></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="">tutorial</a>
-      </li>
-    </ul>
-  </nav>
   <main>
+    <?php
+    if (!empty($_SESSION['error'])) {
+      echo '<div class="error box">' . $_SESSION['error'] . '</div>';
+    }
+    if (!empty($_SESSION['info'])) {
+      echo '<div class="info box">' . $_SESSION['info'] . '</div>';
+    }
+    ?>
     <?php echo $content; ?>
   </main>
-  <footer>
-
-  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw==" crossorigin="anonymous">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
